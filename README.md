@@ -1,5 +1,5 @@
 # Gadolac 🎧
 
 
-![](/drugs.png)
-![](/drugs2.png)
+![](https://github.com/DiegoLins10/gadolac/blob/main/gadolac.png)
+
