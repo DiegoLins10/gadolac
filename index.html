@@ -74,7 +74,7 @@
                             </p>
                             <a href="#home" class="button button--flex" id="myBtn">
                                 <span class="button--flex">
-                                    <i class="ri-shopping-bag-line button__icon"></i></i> Carrinho
+                                    <i class="ri-shopping-bag-line button__icon"></i></i> Joguinho
                                 </span>
                                 <span class="home__price">Online</span>
                             </a>
@@ -672,24 +672,34 @@
                     
                     // Get the button that opens the modal
                     var btn = document.getElementById("myBtn");
+                    var navmenu = document.getElementById("nav-menu");
                     
                     // Get the <span> element that closes the modal
                     var span = document.getElementsByClassName("close")[0];
+
+                    // Get body
+                    var body = document.getElementsByTagName('body')[0];
                     
                     // When the user clicks the button, open the modal 
                     btn.onclick = function() {
                       modal.style.display = "block";
+                      body.style.overflow = "hidden";
+                      navmenu.style.visibility = "hidden";
                     }
                     
                     // When the user clicks on <span> (x), close the modal
                     span.onclick = function() {
                       modal.style.display = "none";
+                      body.style.overflow = "auto";
+                      navmenu.style.visibility = "visible";
                     }
                     
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function(event) {
                       if (event.target == modal) {
                         modal.style.display = "none";
+                        body.style.overflow = "auto";
+                        navmenu.style.visibility = "visible";
                       }
                     }
 
