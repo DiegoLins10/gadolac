@@ -405,11 +405,11 @@ img {
   line-height: 4rem;
 }
 
-.products__container {
-  grid-template-columns: repeat(2, 1fr);
+/* .products__container {
+  grid-template-columns: repeat(3, 1fr);
   gap: 5rem 1.5rem;
   padding-top: 3rem;
-}
+} */
 
 .products__card {
   position: relative;
@@ -576,7 +576,7 @@ img {
 
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
-@media screen and (max-width: 340px) {
+@media screen and (min-width: 340px) {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -612,10 +612,58 @@ img {
   .case__data {
     padding: 0;
   }
+
   .products__container {
-    grid-template-columns: 142px;
+    grid-template-columns: repeat(1, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
     justify-content: center;
+  } 
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
   }
+  .section__title {
+    font-size: var(--big-font-size);
+  }
+  .home__img {
+    width: 200px;
+    top: -13rem;
+  }
+  .home__title {
+    top: -4rem;
+    font-size: var(--bigger-font-size);
+  }
+  .home__data {
+    padding-top: 1rem;
+  }
+  .home__description {
+    font-size: var(--small-font-size);
+  }
+  .specs__img {
+    width: 200px;
+  }
+  .case__container {
+    grid-template-columns: .6fr 1fr;
+  }
+  .case__img {
+    width: 220px;
+    top: -2rem;
+    left: -9rem;
+  }
+  .case__data {
+    padding: 0;
+  }
+
+  .products__container {
+    grid-template-columns: repeat(2, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
+    justify-content: center;
+  } 
 }
 
 /* For medium devices */
@@ -658,10 +706,13 @@ img {
     justify-items: center;
     align-items: center;
   }
-  .products__container {
-    grid-template-columns: repeat(3, 142px);
+
+    .products__container {
+    grid-template-columns: repeat(3, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
     justify-content: center;
-  }
+  } 
 }
 
 @media screen and (min-width: 767px) {
@@ -695,6 +746,7 @@ img {
   .home__img {
     top: 9rem;
     left: 9rem;
+
 }
   }
   .home__data {
@@ -726,11 +778,13 @@ img {
   .discount__description {
     margin-bottom: var(--mb-2);
   }
-  .products__container {
+
+  /* default */
+  /* .products__container {
     grid-template-columns: repeat(3, 162px);
     gap: 6rem 3rem;
     padding-top: 5rem;
-  }
+  } */
   .products__card {
     height: 200px;
     padding: .85rem;
