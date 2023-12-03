@@ -461,6 +461,10 @@ img {
 .products__title, .products__price {
   font-size: var(--small-font-size);
 }
+.products__title{
+  margin-bottom: 20px;
+  text-align: center;
+}
 
 .products__price {
   font-weight: var(--font-semi-bold);
