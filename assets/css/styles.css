@@ -272,6 +272,10 @@ img {
   margin-bottom: var(--mb-2-5);
   line-height: var(--text-line-height);
 }
+.beneficios__description {
+  margin-bottom: var(--mb-2-5);
+  line-height: var(--text-line-height);
+}
 
 .home__price {
   font-size: var(--h3-font-size);
@@ -306,6 +310,7 @@ img {
 /*=============== SPONSOR ===============*/
 .sponsor__img {
   width: 90px;
+  
 }
 
 .sponsor__container {
@@ -618,6 +623,9 @@ img {
   .home__description {
     font-size: var(--small-font-size);
   }
+  .beneficios__description {
+    font-size: var(--small-font-size);
+  }
   .specs__img {
     width: 200px;
   }
@@ -667,6 +675,9 @@ img {
     padding-top: 1rem;
   }
   .home__description {
+    font-size: var(--small-font-size);
+  }
+  .beneficios__description {
     font-size: var(--small-font-size);
   }
   .specs__img {
@@ -864,6 +875,12 @@ img {
   .home__description {
     padding-right: 5rem;
     color: var(--title-color);
+  }
+
+  .beneficios__description {
+    padding-right: 5rem;
+    color: var(--title-color);
+    text-align: center;
   }
   .sponsor__img {
     width: 100px;
