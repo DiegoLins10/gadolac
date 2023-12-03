@@ -537,19 +537,44 @@
                                             this.innerHTML = "<img id='imgJogada' src='assets/img/X.png'/>";
                                             this.setAttribute("jogada", jogador1);
                                             vez = jogador2;
-                                        } else {
-                                            this.innerHTML = "<img id='imgJogada' src='assets/img/O.png'/>";
-                                            this.setAttribute("jogada", jogador2);
-                                            vez = jogador1;
-                                        }
+                                            
+                                        } 
+                                        // else {
+                                        //     this.innerHTML = "<img id='imgJogada' src='assets/img/O.png'/>";
+                                        //     this.setAttribute("jogada", jogador2);
+                                        //     vez = jogador1;
+                                        // }
                                         atualizaVez();
                                         verificarVencedor();
+                                        sleep(1000);
+                                        JogadaAutomatica();
                                     }
                                 }
                             );
                         }
                     }
 
+                    function JogadaAutomatica(){
+                        let espacos = document.getElementsByClassName('espacos');
+                        let espacosVazios = [];
+                        for(var i = 0; i < espacos.length; i++){
+                            var jaJogou = espacos[i].getAttributeNode('jogada')
+                            if(jaJogou.value == ''){
+                                    espacosVazios.push(i);                                 
+                            }
+                        }
+                        let result = getRandomInt(espacosVazios.length);
+                        espacos[espacosVazios[result]].innerHTML = "<img id='imgJogada' src='assets/img/O.png'/>";
+                        espacos[espacosVazios[result]].setAttribute("jogada", jogador2);
+                        vez = jogador1;
+                        atualizaVez();
+                        sleep(500);
+                        verificarVencedor();
+                    }
+
+                    function getRandomInt(max) {
+                        return Math.floor(Math.random() * max);
+                        }
 
                     async function verificarVencedor() {
                         var a1 = document.getElementById('a1').getAttribute('jogada');
