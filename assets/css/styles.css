@@ -11,7 +11,7 @@
   --text-color: hsl(var(--hue-color), 4%, 75%);
   --text-color-light: hsl(var(--hue-color), 4%, 65%);
   --white-color: black;
-  --body-color: hsl(var(--hue-color), 4%, 100%); /*4% 6%*/
+  --body-color: #F9DFD0; /*4% 6%*/
   --container-color: hsl(var(--hue-color), 4%, 10%);
   --text-gradient: linear-gradient(hsl(var(--hue-color), 4%, 95%), hsl(var(--hue-color), 100%, 45%));
   --scroll-thumb-color: hsl(var(--hue-color), 4%, 16%);
@@ -419,6 +419,14 @@ img {
   border-radius: .5rem;
   display: grid;
 }
+.ideias__card {
+  position: relative;
+  height: 200px;
+  background-color: #e1396d;
+  padding: .75rem;
+  border-radius: .5rem;
+  display: grid;
+}
 
 .products__img {
   width: 80px;
@@ -428,8 +436,20 @@ img {
   top: -3rem;
   position: absolute;
 }
+.ideias__img {
+  width: 80px;
+  inset: 0;
+  margin-right: auto;
+  margin-left: auto;
+  top: -3rem;
+  position: absolute;
+  border-image: 50%;
+}
 
 .products__content {
+  align-self: flex-end;
+}
+.ideias__content {
   align-self: flex-end;
 }
 
@@ -619,6 +639,12 @@ img {
     padding-top: 5rem;
     justify-content: center;
   } 
+  .ideias__container {
+    grid-template-columns: repeat(1, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
+    justify-content: center;
+  } 
 }
 
 @media screen and (min-width: 500px) {
@@ -659,6 +685,13 @@ img {
   }
 
   .products__container {
+    grid-template-columns: repeat(2, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
+    justify-content: center;
+  } 
+
+  .ideias__container {
     grid-template-columns: repeat(2, 162px);
     gap: 6rem 3rem;
     padding-top: 5rem;
@@ -708,6 +741,12 @@ img {
   }
 
     .products__container {
+    grid-template-columns: repeat(3, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
+    justify-content: center;
+  } 
+    .ideias__container {
     grid-template-columns: repeat(3, 162px);
     gap: 6rem 3rem;
     padding-top: 5rem;
@@ -789,8 +828,19 @@ img {
     height: 200px;
     padding: .85rem;
   }
+  .ideias__card {
+    height: 200px;
+    padding: .85rem;
+    text-align: center;
+  }
   .products__img {
     width: 95px;
+  }
+  .ideias__img {
+    width: 128px;
+    height: 128px;
+    border:4px solid #79DAF1;
+    border-radius: 500px;
   }
   .footer__container {
     grid-template-columns: .4fr .7fr .7fr 1fr;
